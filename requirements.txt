@@ -1,0 +1,6 @@
+# Derived from imports; versions match evidence/RUN-20261112-140253/env.txt.
+python-can==4.6.1
+pytest==9.2.0
+# Not imported yet (ISO-TP multi-frame is future work, see code comments):
+isotp
+udsoncan==1.26.1
