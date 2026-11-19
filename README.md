@@ -1,5 +1,13 @@
 # vcan-uds-testkit
 
+> **定位**：python-can virtual 总线上的 UDS 诊断安全测试套件（模拟 ECU + 单帧客户端 + 18 条 pytest 用例 + 运行证据链）
+> **技能**：UDS（0x10/0x11/0x22/0x27/0x2E/0x3E）、安全访问锁定、pytest、证据链（帧/JUnit/哈希）
+> **证据**：18 passed（RUN-20261112-140253：frames.csv + pytest.xml + env.txt + sha256.txt）
+> **复现**：`pip install -r requirements.txt && python -m pytest -q`
+> **边界**：仿真环境，不适用于真实车辆/ECU；ISO-TP 多帧未接入
+> **维护**：稳定（2026-11-12 发布，MIT）
+
+
 基于 python-can **virtual 总线**的 UDS（ISO 14229）诊断安全测试套件：一个行为可参数化的模拟 ECU、一个单帧 UDS 客户端、18 条 pytest 用例，以及一条「帧记录 + JUnit XML + 环境声明 + SHA-256 清单」的运行证据链。
 
 > 定位声明：本项目用于**教学与仿真环境**中的诊断访问控制测试练习，不针对、也不适用于任何真实车辆、真实 ECU 或任何产品。
